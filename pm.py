@@ -1,3 +1,5 @@
+#Skeleton Code for password manager
+
 import sqlite3
 from cryptography.fernet import Fernet
 import getpass #for securely entering the master password
@@ -47,7 +49,7 @@ def get_password(service):
     print(f"No password found for {service}")
 
 init_db()
-master_password = "w"
+master_password = "password"
 
 print("Welcome to the Password Manager!")
 
@@ -76,4 +78,5 @@ while True:
     print("Goodbye!")
     break
   else:
+
     print("Invalid choice. Please try again.")
