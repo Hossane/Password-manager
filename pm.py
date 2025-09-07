@@ -182,7 +182,6 @@ if __name__ == "__main__":
     if not os.path.exists(DB_PATH):
       init_db()
 
-
     print("\nWhat would you like to do?")
     print("1. Add a new password")
     print("2. Retrieve a password")
@@ -239,4 +238,5 @@ if __name__ == "__main__":
       break
     else:
       print("Invalid choice. Please try again.")
+
       input("Press Enter to continue...")
