@@ -48,7 +48,7 @@ A secure, local, command-line password manager built in Python. It encrypts your
 
 1.  Run the script:
     ```bash
-    python password_manager.py
+    python pm.py
     ```
 2.  Set a strong master password on first launch.
 3.  Use the menu to:
@@ -57,6 +57,9 @@ A secure, local, command-line password manager built in Python. It encrypts your
     - **List** all saved services.
     - **Edit** or **Delete** existing entries.
 
+or 
+
+Run the program pm.py
 ---
 
 ## Future Enhancements
