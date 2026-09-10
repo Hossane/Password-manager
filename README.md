@@ -60,6 +60,7 @@ A secure, local, command-line password manager built in Python. It encrypts your
 or 
 
 Run the program pm.py
+
 ---
 
 ## Future Enhancements
