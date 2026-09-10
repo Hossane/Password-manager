@@ -91,7 +91,7 @@ def add_password(service, username, password, fernet):
 def check_input(service):
   conn = sqlite3.connect(DB_PATH)
   c = conn.cursor()
-  c.execute("SELECT service FROM passwords WHERE service = ?", (service))
+  c.execute("SELECT service FROM passwords WHERE service = ?", (service,))
   result = c.fetchone()
   conn.close()
 
@@ -106,7 +106,7 @@ def check_input(service):
 def get_password(service):
   conn = sqlite3.connect(DB_PATH)
   c = conn.cursor()
-  c.execute("SELECT username, password_encrypted FROM passwords WHERE service = ?", (service))
+  c.execute("SELECT username, password_encrypted FROM passwords WHERE service = ?", (service,))
   result = c.fetchone()
   conn.close()
   if result:
@@ -182,6 +182,7 @@ if __name__ == "__main__":
     if not os.path.exists(DB_PATH):
       init_db()
 
+
     print("\nWhat would you like to do?")
     print("1. Add a new password")
     print("2. Retrieve a password")
@@ -238,5 +239,4 @@ if __name__ == "__main__":
       break
     else:
       print("Invalid choice. Please try again.")
-
       input("Press Enter to continue...")
